@@ -18,6 +18,7 @@ body.creative-layout {
   background: var(--bg) !important;
   color: var(--fg);
   font-family: "DM Sans", -apple-system, sans-serif;
+  font-weight: 500;
 }
 
 .creative-wrapper {
@@ -53,11 +54,12 @@ body.creative-layout #main.creative-main {
 
 .creative-header .logo {
   font-family: "Instrument Serif", serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.65rem;
+  font-weight: 600;
   color: var(--fg) !important;
   text-decoration: none;
   border: none;
+  letter-spacing: -0.02em;
 }
 
 .creative-header .logo:hover {
@@ -74,6 +76,8 @@ body.creative-layout #main.creative-main {
   text-decoration: none;
   border: none;
   font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   transition: color 0.2s ease;
 }
 
@@ -87,23 +91,27 @@ body.creative-layout #main.creative-main {
 }
 
 .hero-greeting {
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--fg-muted);
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: 0.03em;
 }
 
 .hero-title {
   font-family: "Instrument Serif", serif;
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  font-weight: 400;
+  font-size: clamp(3.25rem, 11vw, 5.5rem);
+  font-weight: 600;
   color: var(--fg);
   margin: 0 0 1rem 0;
-  line-height: 1.1;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
 .hero-tagline {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.55;
   color: var(--fg-muted);
   max-width: 32em;
   margin: 0 0 1.5rem 0;
@@ -117,7 +125,7 @@ body.creative-layout #main.creative-main {
   color: var(--accent) !important;
   text-decoration: none;
   border: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero-link:hover {
@@ -180,11 +188,12 @@ body.creative-layout #main.creative-main {
 
 .section-head {
   font-family: "Instrument Serif", serif;
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: var(--fg);
   margin: 0 0 1.5rem 0;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
 }
 
 .section-head .arrow {
@@ -214,16 +223,18 @@ body.creative-layout #main.creative-main {
 
 .project-card h3 {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--fg);
   margin: 0;
   display: inline;
+  letter-spacing: 0.01em;
 }
 
 .project-role {
   color: var(--accent);
   font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .project-role::before {
@@ -232,7 +243,8 @@ body.creative-layout #main.creative-main {
 }
 
 .project-desc {
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 500;
   line-height: 1.65;
   color: var(--fg-muted);
   margin: 0;
@@ -362,10 +374,11 @@ body.creative-layout #main.creative-main {
 
 .experience-modal-body h4 {
   font-family: "DM Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--fg);
   margin: 1.25rem 0 0.5rem 0;
+  letter-spacing: 0.02em;
 }
 
 .experience-modal-body h4:first-of-type {
@@ -393,8 +406,9 @@ body.creative-layout #main.creative-main {
 }
 
 .about-lead {
-  font-size: 1.15rem;
-  line-height: 1.65;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
   color: var(--fg);
   margin: 0 0 1rem 0;
 }
@@ -424,9 +438,10 @@ body.creative-layout #main.creative-main {
 }
 
 .interests-text {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--fg-muted);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--fg);
   margin: 0 0 1rem 0;
 }
 
@@ -439,27 +454,69 @@ body.creative-layout #main.creative-main {
   gap: 0.75rem 1.25rem;
 }
 
+.interests-list-centered {
+  justify-content: center;
+}
+
+.interests-text-centered {
+  text-align: center;
+}
+
 .interests-list li {
   display: inline-block;
 }
 
 .interest-btn {
   display: inline-block;
-  padding: 0.4em 0.9em;
+  padding: 0.45em 1em;
   background: var(--accent-subtle);
   color: var(--accent);
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   font-family: inherit;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  letter-spacing: 0.02em;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
 .interest-btn:hover {
   background: var(--accent);
   color: #fff;
+}
+
+/* ----- Publications ----- */
+.section-publications {
+  border-top: 1px solid var(--border);
+}
+
+.publications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publications-list li {
+  margin-bottom: 1rem;
+}
+
+.publications-list a {
+  color: var(--accent);
+  font-weight: 500;
+  border: none;
+}
+
+.publications-list a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.publication-meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+  margin-top: 0.2rem;
 }
 
 /* ----- Repo blocks (Long-style clickable cards) ----- */
@@ -495,10 +552,11 @@ body.creative-layout #main.creative-main {
 
 .repo-block h3.repo-title {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--fg);
   margin: 0 0 0.5rem 0;
+  letter-spacing: 0.01em;
 }
 
 .repo-block .repo-desc {

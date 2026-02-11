@@ -15,7 +15,6 @@
 
 		<div id="wrapper" class="creative-wrapper">
 			<header id="header" class="creative-header">
-				<a href="index.html" class="logo">Zaiba Amla</a>
 				<nav class="creative-nav">
 					<a href="#about">About</a>
 					<a href="#projects">Experience</a>
@@ -23,7 +22,6 @@
 					<a href="#interests">Interests</a>
 					<a href="#publications">Publications</a>
 					<a href="#repos">Repos</a>
-					<a href="#contact">Contact</a>
 				</nav>
 			</header>
 
@@ -35,8 +33,16 @@
 					<div class="hero-links">
 						<a href="#about" class="hero-link">Resume</a>
 						<span class="hero-sep">·</span>
+						<a href="https://www.linkedin.com/in/zaibaamla/" class="hero-link" target="_blank" rel="noopener">LinkedIn</a>
+						<span class="hero-sep">·</span>
 						<a href="mailto:zaiba.amla06@gmail.com" class="hero-link">zaiba.amla06@gmail.com</a>
 					</div>
+				</section>
+
+				<section id="about" class="section section-about">
+					<p class="about-lead">Data and code deserve care. I sit at the intersection of rigorous statistics, ML, and healthcare—building pipelines that researchers and clinicians can trust.</p>
+					<p class="about-body">MS Statistics (Machine Learning) at Northeastern; BSc Math (Honours) with CS and Biology from Toronto Metropolitan. When I'm not in the lab or teaching, I'm exploring places, discovering music, or deep in a book and a good coffee.</p>
+					<a href="mailto:zaiba.amla06@gmail.com" class="about-cta">More / Get in touch ↘</a>
 				</section>
 
 				<section id="projects" class="section section-projects">
@@ -144,12 +150,6 @@
 					</div>
 				</div>
 
-				<section id="about" class="section section-about">
-					<p class="about-lead">Data and code deserve care. I sit at the intersection of rigorous statistics, ML, and healthcare—building pipelines that researchers and clinicians can trust.</p>
-					<p class="about-body">MS Statistics (Machine Learning) at Northeastern; BSc Math (Honours) with CS and Biology from Toronto Metropolitan. When I'm not in the lab or teaching, I'm exploring places, discovering music, or deep in a book and a good coffee.</p>
-					<a href="#contact" class="about-cta">More / Get in touch ↘</a>
-				</section>
-
 				<section id="education" class="section section-education">
 					<h2 class="section-head">Education <span class="arrow">↘</span></h2>
 					<p class="experience-hint">Click a school for more detail.</p>
@@ -168,6 +168,14 @@
 								<span class="project-role">BSc Mathematics and its Applications (Honours) · May 2024</span>
 							</div>
 							<p class="project-desc">Toronto, ON. Computer Science concentration, Biology minor. Dean's List, NSERC USRA.</p>
+							<span class="experience-read-more">Read more →</span>
+						</article>
+						<article class="project-card experience-card" data-experience="edu-ntu" tabindex="0" role="button">
+							<div class="project-header">
+								<h3>Nanyang Technological University Singapore</h3>
+								<span class="project-role">Exchange Semester · 2023</span>
+							</div>
+							<p class="project-desc">Singapore. Real Analysis, Cloud Computing, Virtual and Augmented Reality, Data Applications in Natural Sciences.</p>
 							<span class="experience-read-more">Read more →</span>
 						</article>
 					</div>
@@ -200,16 +208,20 @@
 						<li>Leadership and outreach</li>
 					</ul>
 				</div>
-
-				<section id="interests" class="section section-interests">
-					<h2 class="section-head">Interests <span class="arrow">↘</span></h2>
-					<p class="interests-text interests-text-centered">I like to bake, love to travel, and love music.</p>
-					<ul class="interests-list interests-list-centered">
-						<li><button type="button" class="interest-btn" data-gallery="baking">Baking</button></li>
-						<li><button type="button" class="interest-btn" data-gallery="travel">Travel</button></li>
-						<li><button type="button" class="interest-btn" data-gallery="music">Music</button></li>
+				<div hidden id="edu-ntu" class="experience-detail-content">
+					<p class="exp-meta"><strong>Nanyang Technological University Singapore</strong> · Exchange Semester · 2023 · Singapore</p>
+					<h4>About my time there</h4>
+					<p>Exchange semester during my undergraduate degree. Studied Real Analysis, Cloud Computing, Virtual and Augmented Reality, and Data Applications in Natural Sciences.</p>
+					<h4>Why I liked it</h4>
+					<p>Edit this in index.html — what made this exchange meaningful to you.</p>
+					<h4>Key takeaways</h4>
+					<ul>
+						<li>Real Analysis</li>
+						<li>Cloud Computing</li>
+						<li>Virtual and Augmented Reality</li>
+						<li>Data applications in natural sciences</li>
 					</ul>
-				</section>
+				</div>
 
 				<section id="publications" class="section section-publications">
 					<h2 class="section-head">Publications <span class="arrow">↘</span></h2>
@@ -220,11 +232,6 @@
 						</li>
 					</ul>
 				</section>
-
-				<div class="nerding-block" id="nerding-block">
-					<p class="nerding-label">Something I'm nerding out on right now</p>
-					<p class="nerding-content">Really tiny frogs.</p>
-				</div>
 
 				<!-- Slide gallery modal -->
 				<div id="gallery-modal" class="gallery-modal" aria-hidden="true">
@@ -273,12 +280,20 @@
 					</div>
 				</section>
 
-				<section id="contact" class="section section-contact">
-					<h2 class="section-head">Links <span class="arrow">↘</span></h2>
-					<ul class="contact-list">
-						<li><a href="mailto:zaiba.amla06@gmail.com">zaiba.amla06@gmail.com</a></li>
+				<section id="interests" class="section section-interests">
+					<h2 class="section-head">Interests <span class="arrow">↘</span></h2>
+					<p class="interests-text interests-text-centered">I like to bake, love to travel, and love music.</p>
+					<ul class="interests-list interests-list-centered">
+						<li><button type="button" class="interest-btn" data-gallery="baking">Baking</button></li>
+						<li><button type="button" class="interest-btn" data-gallery="travel">Travel</button></li>
+						<li><button type="button" class="interest-btn" data-gallery="music">Music</button></li>
 					</ul>
 				</section>
+
+				<div class="nerding-block" id="nerding-block">
+					<p class="nerding-label">Something I'm nerding out on right now</p>
+					<p class="nerding-content">Really tiny frogs.</p>
+				</div>
 
 				<footer class="creative-footer">
 					<p>© 2025 Zaiba Amla.</p>

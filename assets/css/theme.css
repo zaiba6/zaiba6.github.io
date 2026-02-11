@@ -46,7 +46,7 @@ body.creative-layout #main.creative-main {
 /* ----- Header ----- */
 .creative-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 2rem 0 3rem;
   border-bottom: none;

@@ -258,12 +258,77 @@ body.creative-layout #main.creative-main {
   margin: 0;
 }
 
-.education-fun-classes {
+.education-card-inner {
+  display: block;
+  padding: 1.25rem 1.25rem 1.25rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: visible;
+}
+
+.education-card-inner .project-desc,
+.education-card-inner .education-fun-classes,
+.education-card-inner .experience-read-more {
+  display: block;
+}
+
+.education-card .edu-school-name {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin: 0 0 0.35rem 0;
+  letter-spacing: 0.01em;
+}
+
+.edu-degree {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.2rem 0;
+}
+
+.edu-dates {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--fg-muted);
-  margin: 0.4rem 0 0 0;
+  margin: 0 0 0.2rem 0;
+}
+
+.edu-location {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+  margin: 0 0 0.75rem 0;
+}
+
+.education-card:hover .education-card-inner {
+  border-color: var(--accent);
+  box-shadow: 0 2px 12px var(--accent-subtle);
+}
+
+.education-card-inner .education-fun-classes {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+  margin: 0.6rem 0 0 0;
+  padding: 0;
   font-style: italic;
+}
+
+.education-card-inner .experience-read-more {
+  margin-top: 0.5rem;
+}
+
+/* Education cards: inner is the only visible card box; no extra outer padding */
+.education-card.experience-card {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .project-card em {

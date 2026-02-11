@@ -6,7 +6,10 @@
   var modal = document.getElementById('gallery-modal');
   var backdrop = modal && modal.querySelector('.gallery-modal-backdrop');
   var closeBtn = modal && modal.querySelector('.gallery-close');
-  var slidesContainer = document.getElementById('gallery-slides');
+  var slidesWrapper = document.getElementById('gallery-slides');
+  var slidesBaking = document.getElementById('gallery-slides-baking');
+  var slidesTravel = document.getElementById('gallery-slides-travel');
+  var slidesMusic = document.getElementById('gallery-slides-music');
   var titleEl = document.getElementById('gallery-title');
   var counterEl = document.getElementById('gallery-counter');
   var dotsEl = document.getElementById('gallery-dots');
@@ -16,9 +19,10 @@
   var currentIndex = 0;
   var slides = [];
   var dots = [];
+  var activeSlidesContainer = null;
 
-  function getSlides() {
-    return slidesContainer ? Array.from(slidesContainer.querySelectorAll('.gallery-slide')) : [];
+  function getSlidesFrom(container) {
+    return container ? Array.from(container.querySelectorAll('.gallery-slide')) : [];
   }
 
   var comingSoonEl = document.getElementById('gallery-coming-soon');
@@ -27,19 +31,44 @@
 
   function openModal(galleryName) {
     if (!modal) return;
-    if (galleryName === 'travel' || galleryName === 'music') {
-      if (titleEl) titleEl.textContent = galleryName.charAt(0).toUpperCase() + galleryName.slice(1);
-      if (comingSoonEl) comingSoonEl.style.display = 'block';
-      if (slidesContainer) slidesContainer.style.display = 'none';
-      if (controlsEl) controlsEl.style.display = 'none';
-      if (dotsWrap) dotsWrap.style.display = 'none';
+    if (galleryName === 'travel') {
+      if (titleEl) titleEl.textContent = 'Travel';
+      if (comingSoonEl) comingSoonEl.style.display = 'none';
+      if (slidesWrapper) slidesWrapper.style.display = '';
+      if (slidesBaking) slidesBaking.style.display = 'none';
+      if (slidesTravel) slidesTravel.style.display = '';
+      if (controlsEl) controlsEl.style.display = 'flex';
+      if (dotsWrap) dotsWrap.style.display = 'flex';
+      activeSlidesContainer = slidesTravel;
+      slides = getSlidesFrom(activeSlidesContainer);
+      currentIndex = 0;
+      updateSlide();
+      renderDots();
+    } else if (galleryName === 'music') {
+      if (titleEl) titleEl.textContent = 'Music';
+      if (comingSoonEl) comingSoonEl.style.display = 'none';
+      if (slidesWrapper) slidesWrapper.style.display = '';
+      if (slidesBaking) slidesBaking.style.display = 'none';
+      if (slidesTravel) slidesTravel.style.display = 'none';
+      if (slidesMusic) slidesMusic.style.display = '';
+      if (controlsEl) controlsEl.style.display = 'flex';
+      if (dotsWrap) dotsWrap.style.display = 'flex';
+      activeSlidesContainer = slidesMusic;
+      slides = getSlidesFrom(activeSlidesContainer);
+      currentIndex = 0;
+      updateSlide();
+      renderDots();
     } else {
       if (titleEl) titleEl.textContent = 'Baking';
       if (comingSoonEl) comingSoonEl.style.display = 'none';
-      if (slidesContainer) slidesContainer.style.display = '';
+      if (slidesWrapper) slidesWrapper.style.display = '';
+      if (slidesBaking) slidesBaking.style.display = '';
+      if (slidesTravel) slidesTravel.style.display = 'none';
+      if (slidesMusic) slidesMusic.style.display = 'none';
       if (controlsEl) controlsEl.style.display = 'flex';
       if (dotsWrap) dotsWrap.style.display = 'flex';
-      slides = getSlides();
+      activeSlidesContainer = slidesBaking;
+      slides = getSlidesFrom(activeSlidesContainer);
       currentIndex = 0;
       updateSlide();
       renderDots();

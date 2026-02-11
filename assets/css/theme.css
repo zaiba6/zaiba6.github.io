@@ -242,12 +242,28 @@ body.creative-layout #main.creative-main {
   color: var(--fg-muted);
 }
 
+.project-location {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
 .project-desc {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.65;
   color: var(--fg-muted);
   margin: 0;
+}
+
+.education-fun-classes {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+  margin: 0.4rem 0 0 0;
+  font-style: italic;
 }
 
 .project-card em {

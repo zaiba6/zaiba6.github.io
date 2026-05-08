@@ -15,6 +15,7 @@
 
 		<div id="wrapper" class="creative-wrapper">
 			<header id="header" class="creative-header">
+				<span class="header-wordmark">zaiba.amla</span>
 				<nav class="creative-nav">
 					<a href="#projects"><span class="nav-num">01</span>WORK</a>
 					<a href="#education"><span class="nav-num">02</span>EDU</a>
@@ -27,14 +28,20 @@
 			<main id="main" class="creative-main">
 				<section class="hero">
 					<p class="hero-boot"><span class="prompt">$</span> <span class="boot-cmd">./zaiba.sh --portfolio --verbose</span></p>
-					<h1 class="hero-title">I'm Zaiba.<span class="cursor"></span></h1>
-					<p class="hero-tagline">A huge math nerd who loves everything about data and code. Currently pursuing an MS in Statistics at Northeastern University, running a healthcare research pipeline at MyAtlas, and teaching ML to undergrads. Outside of that: baking things, going places, and making music-related excuses to be out late.</p>
-					<div class="hero-links">
-						<a href="Resume_ZaibaAmla.pdf" class="hero-link" target="_blank" rel="noopener">resume.pdf</a>
-						<span class="hero-sep">·</span>
-						<a href="https://www.linkedin.com/in/zaibaamla/" class="hero-link" target="_blank" rel="noopener">linkedin</a>
-						<span class="hero-sep">·</span>
-						<a href="mailto:zaiba.amla06@gmail.com" class="hero-link">zaiba.amla06@gmail.com</a>
+					<div class="hero-body">
+						<div class="hero-left">
+							<h1 class="hero-title">I'm Zaiba.<span class="cursor"></span></h1>
+						</div>
+						<div class="hero-right">
+							<p class="hero-tagline">A huge math nerd who loves everything about data and code. Currently pursuing an MS in Statistics at Northeastern University, running a healthcare research pipeline at MyAtlas, and teaching ML to undergrads. Outside of that: baking things, going places, and making music-related excuses to be out late.</p>
+							<div class="hero-links">
+								<a href="Resume_ZaibaAmla.pdf" class="hero-link" target="_blank" rel="noopener">resume.pdf</a>
+								<span class="hero-sep">·</span>
+								<a href="https://www.linkedin.com/in/zaibaamla/" class="hero-link" target="_blank" rel="noopener">linkedin</a>
+								<span class="hero-sep">·</span>
+								<a href="mailto:zaiba.amla06@gmail.com" class="hero-link">zaiba.amla06@gmail.com</a>
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -43,40 +50,52 @@
 					<p class="experience-hint">// click any role for more detail</p>
 					<div class="project-list">
 						<article class="project-card experience-card" data-experience="exp-myatlas" tabindex="0" role="button">
-							<div class="project-header">
+							<div class="exp-meta-col">
 								<h3>Graduate Research Assistant</h3>
 								<span class="project-role">MyAtlas</span>
-								<span class="project-location">Boston, MA · Nov 2025 – Present</span>
+								<span class="project-location">Boston, MA</span>
+								<span class="project-date">Nov 2025 – Present</span>
+								<span class="experience-read-more">read_more() →</span>
 							</div>
-							<p class="project-desc">Pipeline processing 1.5M+ patient records to extract social determinants of health from EMR notes; entity recognition and normalization to ICD-10 across 15 SDOH categories. BigQuery integration with Mayo Clinic EMR; PHQ-9 analysis for 10K+ behavioral health patients.</p>
-							<span class="experience-read-more">read_more() →</span>
+							<div class="exp-desc-col">
+								<p class="project-desc">Pipeline processing 1.5M+ patient records to extract social determinants of health from EMR notes; entity recognition and normalization to ICD-10 across 15 SDOH categories. BigQuery integration with Mayo Clinic EMR; PHQ-9 analysis for 10K+ behavioral health patients.</p>
+							</div>
 						</article>
 						<article class="project-card experience-card" data-experience="exp-biotraceit" tabindex="0" role="button">
-							<div class="project-header">
+							<div class="exp-meta-col">
 								<h3>Data Scientist</h3>
 								<span class="project-role">BioTraceIt</span>
-								<span class="project-location">Toronto, ON · Jun 2024 – Sep 2025</span>
+								<span class="project-location">Toronto, ON</span>
+								<span class="project-date">Jun 2024 – Sep 2025</span>
+								<span class="experience-read-more">read_more() →</span>
 							</div>
-							<p class="project-desc">Unsupervised learning (K-means) to segment signal patterns across 1000+ samples; cut manual analysis from 40+ hours to under an hour. End-to-end pipeline to production Dash app on AWS (PostgreSQL, RDS). Deployed 15+ services with Docker/Kubernetes; 99%+ uptime.</p>
-							<span class="experience-read-more">read_more() →</span>
+							<div class="exp-desc-col">
+								<p class="project-desc">Unsupervised learning (K-means) to segment signal patterns across 1000+ samples; cut manual analysis from 40+ hours to under an hour. End-to-end pipeline to production Dash app on AWS (PostgreSQL, RDS). Deployed 15+ services with Docker/Kubernetes; 99%+ uptime.</p>
+							</div>
 						</article>
 						<article class="project-card experience-card" data-experience="exp-tmu" tabindex="0" role="button">
-							<div class="project-header">
+							<div class="exp-meta-col">
 								<h3>Research Assistant</h3>
 								<span class="project-role">Toronto Metropolitan University</span>
-								<span class="project-location">Toronto, ON · Sep 2021 – Apr 2023</span>
+								<span class="project-location">Toronto, ON</span>
+								<span class="project-date">Sep 2021 – Apr 2023</span>
+								<span class="experience-read-more">read_more() →</span>
 							</div>
-							<p class="project-desc">Systematic review of 80+ papers; quantitative benchmarking of 10+ segmentation and registration algorithms. Published in <em>Journal of Imaging Informatics in Medicine</em> (2023). Presented at Imaging Network Ontario (ImNO).</p>
-							<span class="experience-read-more">read_more() →</span>
+							<div class="exp-desc-col">
+								<p class="project-desc">Systematic review of 80+ papers; quantitative benchmarking of 10+ segmentation and registration algorithms. Published in <em>Journal of Imaging Informatics in Medicine</em> (2023). Presented at Imaging Network Ontario (ImNO).</p>
+							</div>
 						</article>
 						<article class="project-card experience-card" data-experience="exp-ta" tabindex="0" role="button">
-							<div class="project-header">
+							<div class="exp-meta-col">
 								<h3>Teaching Assistant</h3>
 								<span class="project-role">Northeastern University</span>
-								<span class="project-location">Boston, MA · Jan 2026 – Present</span>
+								<span class="project-location">Boston, MA</span>
+								<span class="project-date">Jan 2026 – Present</span>
+								<span class="experience-read-more">read_more() →</span>
 							</div>
-							<p class="project-desc">Office hours and grading for 30+ students; Python, scikit-learn, pandas, and visualization. Feedback on code quality and algorithmic choices for supervised/unsupervised learning and model evaluation.</p>
-							<span class="experience-read-more">read_more() →</span>
+							<div class="exp-desc-col">
+								<p class="project-desc">Office hours and grading for 30+ students; Python, scikit-learn, pandas, and visualization. Feedback on code quality and algorithmic choices for supervised/unsupervised learning and model evaluation.</p>
+							</div>
 						</article>
 					</div>
 				</section>

@@ -7,8 +7,8 @@
   --bg: #0a0d0b;
   --bg-card: #0f1410;
   --bg-card-hover: #141a14;
-  --fg: #bcc8b4;
-  --fg-muted: #687868;
+  --fg: #dde8d4;
+  --fg-muted: #96a890;
   --accent: #b8921c;
   --accent2: #4a9438;
   --accent-hover: #d4a828;
@@ -353,7 +353,7 @@ body.creative-layout #main.creative-main {
 .project-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0.75rem;
 }
 
 .project-card {
@@ -369,22 +369,20 @@ body.creative-layout #main.creative-main {
   grid-template-columns: 210px 1fr;
   gap: 3rem;
   align-items: start;
-  border: none;
-  border-top: 1px solid var(--border-dim);
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
   border-left: 2px solid transparent;
-  padding: 2.25rem 1rem 2.25rem 1.25rem;
-  margin: 0 -1.25rem;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.experience-card:last-child {
-  border-bottom: 1px solid var(--border-dim);
-  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  padding: 2rem 1.75rem;
+  margin: 0;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .experience-card:hover {
+  border-color: var(--border);
   border-left-color: var(--accent);
-  background: var(--bg-card);
+  background: var(--bg-card-hover);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
 }
 
 .exp-meta-col {
@@ -435,8 +433,8 @@ body.creative-layout #main.creative-main {
 .project-desc {
   font-size: 0.95rem;
   font-weight: 400;
-  line-height: 1.65;
-  color: var(--fg-muted);
+  line-height: 1.7;
+  color: var(--fg);
   margin: 0;
 }
 
@@ -1007,11 +1005,13 @@ body.creative-layout #main.creative-main {
 .gallery-slide img {
   display: block;
   max-width: 100%;
-  max-height: 72vh;
+  max-height: 68vh;
   width: auto;
   height: auto;
   margin: 0 auto;
-  border-radius: 2px;
+  border-radius: 3px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+  outline: 1px solid rgba(255,255,255,0.06);
 }
 
 .gallery-controls {

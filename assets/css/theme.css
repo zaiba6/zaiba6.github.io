@@ -21,6 +21,40 @@
   --font-serif: "Instrument Serif", Georgia, serif;
 }
 
+/* ── Kill main.css pink bleed ────────────────────────────────────── */
+
+body.creative-layout #header {
+  border-bottom: 1px solid var(--border-dim) !important;
+}
+
+body.creative-layout a {
+  color: var(--accent);
+  border-bottom: none !important;
+  text-decoration: none;
+}
+
+body.creative-layout a:hover {
+  color: var(--accent-hover) !important;
+  border-bottom: none !important;
+  border-bottom-color: transparent !important;
+}
+
+body.creative-layout strong,
+body.creative-layout b {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+body.creative-layout h1,
+body.creative-layout h2,
+body.creative-layout h3,
+body.creative-layout h4,
+body.creative-layout h5,
+body.creative-layout h6 {
+  color: var(--fg);
+  font-family: var(--font-sans);
+}
+
 /* ── Layout ─────────────────────────────────────────────────────── */
 
 body.creative-layout {
@@ -1054,15 +1088,37 @@ body.creative-layout #main.creative-main {
 
 /* ── Leaf decorations ────────────────────────────────────────────── */
 
+/* Hero background leaf — always visible */
+.hero-leaf {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  width: 260px;
+  height: 380px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.hero {
+  position: relative;
+  overflow: visible;
+}
+
+.hero > *:not(.hero-leaf) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Side vine panels */
 .leaf-panel {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 130px;
+  width: 140px;
   pointer-events: none;
   z-index: 1;
   display: none;
-  opacity: 0.9;
 }
 
 .leaf-panel--left  { left: 0; }
@@ -1073,8 +1129,8 @@ body.creative-layout #main.creative-main {
   height: 100%;
 }
 
-@media (min-width: 1480px) { .leaf-panel { display: block; } }
-@media (min-width: 1720px) { .leaf-panel { width: 160px; } }
+@media (min-width: 1100px) { .leaf-panel { display: block; } }
+@media (min-width: 1600px) { .leaf-panel { width: 180px; } }
 
 /* ── Smooth scroll ───────────────────────────────────────────────── */
 

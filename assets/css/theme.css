@@ -4,18 +4,18 @@
  */
 
 :root {
-  --bg: #090f09;
-  --bg-card: #0d150e;
-  --bg-card-hover: #121d13;
-  --fg: #b8cca8;
-  --fg-muted: #4e6840;
-  --accent: #c89020;
-  --accent2: #4ab840;
-  --accent-hover: #e0a830;
-  --accent-dim: rgba(200, 144, 32, 0.1);
-  --accent-glow: rgba(200, 144, 32, 0.28);
-  --border: rgba(200, 144, 32, 0.18);
-  --border-dim: rgba(200, 144, 32, 0.07);
+  --bg: #0a0d0b;
+  --bg-card: #0f1410;
+  --bg-card-hover: #141a14;
+  --fg: #bcc8b4;
+  --fg-muted: #687868;
+  --accent: #b8921c;
+  --accent2: #4a9438;
+  --accent-hover: #d4a828;
+  --accent-dim: rgba(184, 146, 28, 0.09);
+  --accent-glow: rgba(184, 146, 28, 0.22);
+  --border: rgba(184, 146, 28, 0.15);
+  --border-dim: rgba(184, 146, 28, 0.06);
   --font-mono: "Space Mono", "Courier New", monospace;
   --font-sans: "DM Sans", -apple-system, sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
@@ -39,6 +39,18 @@ body.creative-layout a:hover {
   border-bottom-color: transparent !important;
 }
 
+/* Nuke main.css button pink — it sets color !important and pink box-shadow on ALL buttons */
+body.creative-layout button {
+  box-shadow: none !important;
+}
+body.creative-layout .interest-btn       { color: var(--fg-muted) !important; }
+body.creative-layout .gallery-prev,
+body.creative-layout .gallery-next       { color: var(--accent) !important; }
+body.creative-layout .gallery-close      { color: var(--fg-muted) !important; }
+body.creative-layout .gallery-dot        { background: var(--border-dim) !important; color: transparent !important; }
+body.creative-layout .gallery-dot.is-active { background: var(--accent) !important; }
+body.creative-layout .experience-modal-close { color: var(--fg-muted) !important; }
+
 body.creative-layout strong,
 body.creative-layout b {
   color: var(--fg);
@@ -60,8 +72,8 @@ body.creative-layout h6 {
 body.creative-layout {
   background-color: var(--bg) !important;
   background-image:
-    linear-gradient(rgba(200, 144, 32, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(74, 184, 64, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(184, 146, 28, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 146, 28, 0.02) 1px, transparent 1px);
   background-size: 48px 48px;
   color: var(--fg);
   font-family: var(--font-sans);
@@ -454,14 +466,16 @@ body.creative-layout #main.creative-main {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--accent);
-  letter-spacing: 0.04em;
-  opacity: 0.6;
-  margin-top: 0.5rem;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.06em;
+  margin-top: 0.75rem;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.22s ease, transform 0.22s ease, color 0.22s ease;
 }
 
 .experience-card:hover .experience-read-more {
   opacity: 1;
+  transform: translateY(0);
   color: var(--accent-hover);
 }
 
@@ -1129,7 +1143,7 @@ body.creative-layout #main.creative-main {
   height: 100%;
 }
 
-@media (min-width: 1100px) { .leaf-panel { display: block; } }
+@media (min-width: 1100px) { .leaf-panel { display: block; opacity: 0.7; } }
 @media (min-width: 1600px) { .leaf-panel { width: 180px; } }
 
 /* ── Smooth scroll ───────────────────────────────────────────────── */

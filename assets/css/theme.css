@@ -782,9 +782,9 @@ body.creative-layout #main.creative-main {
   border-radius: 50%;
 }
 
-.repo-dot:nth-child(1) { background: rgba(255, 80, 80, 0.35); }
-.repo-dot:nth-child(2) { background: rgba(255, 200, 50, 0.35); }
-.repo-dot:nth-child(3) { background: rgba(74, 184, 64, 0.35); }
+.repo-dot:nth-child(1) { background: rgba(180, 110, 30, 0.4); }
+.repo-dot:nth-child(2) { background: rgba(200, 144, 32, 0.4); }
+.repo-dot:nth-child(3) { background: rgba(74, 184, 64, 0.4); }
 
 .repo-chrome-label {
   font-family: var(--font-mono);
@@ -1051,6 +1051,30 @@ body.creative-layout #main.creative-main {
 }
 
 .creative-footer a { color: var(--accent); border: none; }
+
+/* ── Leaf decorations ────────────────────────────────────────────── */
+
+.leaf-panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 130px;
+  pointer-events: none;
+  z-index: 1;
+  display: none;
+  opacity: 0.9;
+}
+
+.leaf-panel--left  { left: 0; }
+.leaf-panel--right { right: 0; }
+
+.leaf-panel svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1480px) { .leaf-panel { display: block; } }
+@media (min-width: 1720px) { .leaf-panel { width: 160px; } }
 
 /* ── Smooth scroll ───────────────────────────────────────────────── */
 
